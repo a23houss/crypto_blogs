@@ -3,48 +3,71 @@
 <head>
   <meta charset="UTF-8" />
   <title>Fonctions de hachage cryptographique et intégrité des données</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans p-6">
-  <div class="max-w-3xl mx-auto">
-    <h1 class="text-3xl font-bold mb-6">Fonctions de hachage cryptographique et intégrité des données</h1>
+<body class="bg-gray-900 text-gray-100 font-sans">
+  <div class="flex min-h-screen">
+    <!-- Menu latéral -->
+    <aside class="w-64 bg-gray-800 p-6 hidden md:block">
+      <h2 class="text-xl font-semibold mb-4">📚 Navigation</h2>
+      <ul class="space-y-3 text-sm">
+        <li><a href="fondements-cryptographie.html" class="text-blue-400 hover:underline">1. Fondements</a></li>
+        <li><a href="chiffrement-AES.html" class="text-blue-400 hover:underline">2. AES</a></li>
+        <li><a href="diffie-hellman.html" class="text-blue-400 hover:underline">3. Diffie-Hellman</a></li>
+        <li><a href="cryptographie-avancee.html" class="text-blue-400 hover:underline">4. RSA</a></li>
+        <li><a href="cas-pratiques.html" class="text-blue-400 font-bold underline">5. Hachage & Intégrité (vous êtes ici)</a></li>
+        <li><a href="resume-complet.html" class="text-blue-400 hover:underline">6. Signature numérique</a></li>
+      </ul>
+    </aside>
 
-    <p class="mb-4">
-      Dans ce cinquième volet de ma série sur l’initiation à la cryptographie, nous allons explorer comment garantir l’intégrité des données.
-    </p>
-    <p class="mb-4">
-      Petit rappel : lors des précédents posts, nous avons vu que le chiffrement – qu’il soit symétrique (ex. : AES) ou asymétrique (ex. : RSA) – permet d’assurer la confidentialité, c’est-à-dire empêcher la divulgation d’un message à toute personne ne possédant pas la clé secrète.
-    </p>
-    <p class="mb-4">
-      Mais que se passe-t-il si un attaquant intercepte un message chiffré et le modifie ? Le chiffrement ne suffit pas à garantir que le message n’a pas été altéré. C’est là qu’intervient le concept d’intégrité : il permet de vérifier qu’un message n’a pas été modifié entre l’émetteur et le destinataire.
-    </p>
-    <p class="mb-4">
-      Pour répondre à ce besoin d’intégrité, ce post s’intéresse aux fonctions de hachage cryptographiques, qui transforment un message en une empreinte unique (appelée haché) et de taille fixe. Elles doivent être rapides, irréversibles, et résistantes aux collisions, c’est-à-dire qu’il doit être pratiquement impossible que deux messages différents produisent le même haché.
-    </p>
-    <p class="mb-4">
-      Les anciens standards comme MD5 et SHA-1 sont aujourd’hui obsolètes car vulnérables aux attaques par collision.
-    </p>
-    <p class="mb-4">
-      À l’inverse, SHA-2 (ex. : SHA-256) et SHA-3 (basé sur Keccak) sont les standards recommandés pour leur robustesse.
-    </p>
-    <p class="mb-4">
-      Nous verrons comment ces fonctions assurent l’intégrité des données.
-    </p>
-    <p class="mb-6">
-      Enfin, nous parlerons des mécanismes MAC et HMAC, qui garantissent l’intégrité des données en utilisant une clé secrète.
-    </p>
+    <!-- Contenu principal -->
+    <main class="flex-1 p-6 max-w-4xl mx-auto">
+      <h1 class="text-3xl font-bold mb-6">Fonctions de hachage cryptographique et intégrité des données</h1>
 
-    <div class="mt-6">
-      <a href="https://github.com/a23houss/crypto_blogs/raw/main/initiation_cryptographie_5.pdf"
-         class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition"
-         target="_blank">
-        📄 Télécharger le PDF du chapitre
-      </a>
-    </div>
+      <p class="mb-4">
+        Dans ce cinquième volet de ma série sur l’initiation à la cryptographie, nous allons explorer comment garantir l’intégrité des données.
+      </p>
+      <p class="mb-4">
+        Petit rappel : lors des précédents posts, nous avons vu que le chiffrement – qu’il soit symétrique (ex. : AES) ou asymétrique (ex. : RSA) – permet d’assurer la confidentialité, c’est-à-dire empêcher la divulgation d’un message à toute personne ne possédant pas la clé secrète.
+      </p>
+      <p class="mb-4">
+        Mais que se passe-t-il si un attaquant intercepte un message chiffré et le modifie ? Le chiffrement ne suffit pas à garantir que le message n’a pas été altéré. C’est là qu’intervient le concept d’intégrité : il permet de vérifier qu’un message n’a pas été modifié entre l’émetteur et le destinataire.
+      </p>
+      <p class="mb-4">
+        Pour répondre à ce besoin d’intégrité, ce post s’intéresse aux fonctions de hachage cryptographiques, qui transforment un message en une empreinte unique (appelée haché) et de taille fixe. Elles doivent être rapides, irréversibles, et résistantes aux collisions, c’est-à-dire qu’il doit être pratiquement impossible que deux messages différents produisent le même haché.
+      </p>
+      <p class="mb-4">
+        Les anciens standards comme MD5 et SHA-1 sont aujourd’hui obsolètes car vulnérables aux attaques par collision.
+      </p>
+      <p class="mb-4">
+        À l’inverse, SHA-2 (ex. : SHA-256) et SHA-3 (basé sur Keccak) sont les standards recommandés pour leur robustesse.
+      </p>
+      <p class="mb-4">
+        Nous verrons comment ces fonctions assurent l’intégrité des données.
+      </p>
+      <p class="mb-6">
+        Enfin, nous parlerons des mécanismes MAC et HMAC, qui garantissent l’intégrité des données en utilisant une clé secrète.
+      </p>
 
-    <div class="mt-10">
-      <a href="index.html" class="text-sm text-blue-300 hover:underline">← Retour à l’accueil</a>
-    </div>
+      <div class="mt-6 mb-10">
+        <a href="https://github.com/a23houss/crypto_blogs/raw/main/initiation_cryptographie_5.pdf"
+           class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition"
+           target="_blank">
+          📄 Télécharger le PDF du chapitre
+        </a>
+      </div>
+
+      <!-- Navigation articles -->
+      <div class="flex justify-between border-t border-gray-700 pt-6 mt-10 text-sm">
+        <a href="cryptographie-avancee.html" class="text-blue-400 hover:underline">← Chapitre précédent : RSA</a>
+        <a href="resume-complet.html" class="text-blue-400 hover:underline">Chapitre suivant : Signature numérique →</a>
+      </div>
+    </main>
   </div>
+
+  <!-- Pied de page -->
+  <footer class="bg-gray-800 text-center py-4 text-sm text-gray-400">
+    <p>© 2025 Awaleh Houssein, Ph.D – Tous droits réservés</p>
+  </footer>
 </body>
 </html>
