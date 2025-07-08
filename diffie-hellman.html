@@ -5,16 +5,59 @@
   <title>Échange de clés : Diffie-Hellman</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 text-gray-900 font-sans p-6">
-  <h1 class="text-3xl font-bold mb-4">Échange de clés : Diffie-Hellman</h1>
-  <p>Méthode de création de clé secrète partagée sans échange explicite.</p>
-  <div class="mt-6">
-    <a href="https://github.com/a23houss/crypto_blogs/raw/main/initiation_cryptographie_3.pdf" class="text-blue-600 underline font-semibold" target="_blank">
-      📄 Voir le PDF du chapitre
-    </a>
+<body class="bg-gray-900 text-gray-100 font-sans">
+  <div class="flex min-h-screen">
+    <!-- Menu latéral -->
+    <aside class="w-64 bg-gray-800 p-6 hidden md:block">
+      <h2 class="text-xl font-semibold mb-4">📚 Navigation</h2>
+      <ul class="space-y-3 text-sm">
+        <li><a href="fondements-cryptographie.html" class="text-blue-400 hover:underline">1. Fondements</a></li>
+        <li><a href="chiffrement-AES.html" class="text-blue-400 hover:underline">2. AES</a></li>
+        <li><a href="diffie-hellman.html" class="text-blue-400 font-bold underline">3. Diffie-Hellman (vous êtes ici)</a></li>
+        <li><a href="cryptographie-avancee.html" class="text-blue-400 hover:underline">4. RSA</a></li>
+        <li><a href="cas-pratiques.html" class="text-blue-400 hover:underline">5. Hachage & Intégrité</a></li>
+        <li><a href="resume-complet.html" class="text-blue-400 hover:underline">6. Signature numérique</a></li>
+      </ul>
+    </aside>
+
+    <!-- Contenu principal -->
+    <main class="flex-1 p-6 max-w-4xl mx-auto">
+      <h1 class="text-3xl font-bold mb-6">Échange de clés : Diffie-Hellman</h1>
+
+      <p class="mb-4">
+        Dans ce troisième volet de ma série sur l’initiation à la cryptographie, nous allons explorer une méthode révolutionnaire : l’échange de clés Diffie-Hellman.
+      </p>
+
+      <p class="mb-4">
+        Cette méthode a permis de surmonter une limite fondamentale du chiffrement symétrique, à savoir le partage de la clé secrète entre deux parties. 
+        En effet, avant de pouvoir communiquer de manière chiffrée, les deux interlocuteurs doivent se mettre d’accord sur une clé commune, 
+        ce qui représente un défi majeur dans un environnement non sécurisé.
+      </p>
+
+      <p class="mb-6">
+        C’est là qu’intervient l’échange de clés Diffie-Hellman, proposé en 1976 par Whitfield Diffie et Martin Hellman. 
+        Cette méthode permet à deux parties de générer une clé secrète commune sans jamais l’échanger directement, même sur un réseau public comme Internet.
+      </p>
+
+      <div class="mt-6 mb-10">
+        <a href="https://github.com/a23houss/crypto_blogs/raw/main/initiation_cryptographie_3.pdf"
+           class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition"
+           target="_blank">
+          📄 Télécharger le PDF du chapitre
+        </a>
+      </div>
+
+      <!-- Navigation articles -->
+      <div class="flex justify-between border-t border-gray-700 pt-6 mt-10 text-sm">
+        <a href="chiffrement-AES.html" class="text-blue-400 hover:underline">← Chapitre précédent : AES</a>
+        <a href="cryptographie-avancee.html" class="text-blue-400 hover:underline">Chapitre suivant : RSA →</a>
+      </div>
+    </main>
   </div>
-  <div class="mt-8">
-    <a href="index.html" class="text-sm text-gray-600 hover:underline">← Retour à l’accueil</a>
-  </div>
+
+  <!-- Pied de page -->
+  <footer class="bg-gray-800 text-center py-4 text-sm text-gray-400">
+    <p>© 2025 Awaleh Houssein, Ph.D – Tous droits réservés</p>
+  </footer>
 </body>
 </html>
