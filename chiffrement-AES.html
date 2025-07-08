@@ -5,16 +5,46 @@
   <title>Chiffrement symétrique : AES</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 text-gray-900 font-sans p-6">
-  <h1 class="text-3xl font-bold mb-4">Chiffrement symétrique : AES</h1>
-  <p>Structure et fonctionnement du standard AES, utilisé dans le chiffrement des données.</p>
-  <div class="mt-6">
-    <a href="https://github.com/a23houss/crypto_blogs/raw/main/initiation_cryptographie_2.pdf" class="text-blue-600 underline font-semibold" target="_blank">
-      📄 Voir le PDF du chapitre
-    </a>
-  </div>
-  <div class="mt-8">
-    <a href="index.html" class="text-sm text-gray-600 hover:underline">← Retour à l’accueil</a>
+<body class="bg-gray-900 text-gray-100 font-sans p-6">
+  <div class="max-w-3xl mx-auto">
+    <h1 class="text-3xl font-bold mb-6">Chiffrement symétrique : AES</h1>
+
+    <p class="mb-4">
+      Dans ce deuxième volet de ma série sur la cryptographie, je vous propose d'explorer le chiffrement symétrique.
+      Ce cours vous présentera son fonctionnement ainsi que ses deux principales catégories : 
+      le chiffrement à flot et le chiffrement par blocs, sur lequel nous concentrerons notre attention.
+    </p>
+
+    <p class="mb-4">
+      Nous étudierons en détail le standard AES (Advanced Encryption Standard), 
+      référence mondiale du chiffrement symétrique par blocs. Vous découvrirez son historique, 
+      sa structure de base, les mécanismes de chiffrement/déchiffrement, ainsi que le processus 
+      de génération des sous-clés.
+    </p>
+
+    <p class="mb-4">
+      Il est important de noter que le chiffrement AES est utilisé avec un mode opératoire. 
+      Les modes de chiffrement les plus utilisés sont : <strong>ECB, CBC, GCM</strong>. 
+      Pour plus de détails, je vous invite à consulter ce lien :<br>
+      <a href="https://lnkd.in/edWtAns7" target="_blank" class="text-blue-400 underline">https://lnkd.in/edWtAns7</a>
+    </p>
+
+    <p class="mb-6">
+      Enfin, nous mettrons en lumière ses applications concrètes dans divers domaines 
+      pour illustrer son importance dans la sécurité moderne.
+    </p>
+
+    <div class="mt-6">
+      <a href="https://github.com/a23houss/crypto_blogs/raw/main/initiation_cryptographie_2.pdf"
+         class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition"
+         target="_blank">
+        📄 Télécharger le PDF du chapitre
+      </a>
+    </div>
+
+    <div class="mt-10">
+      <a href="index.html" class="text-sm text-blue-300 hover:underline">← Retour à l’accueil</a>
+    </div>
   </div>
 </body>
 </html>
