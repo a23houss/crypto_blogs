@@ -2,19 +2,69 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Cryptographie avancée</title>
+  <title>Chiffrement asymétrique : RSA</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 text-gray-900 font-sans p-6">
-  <h1 class="text-3xl font-bold mb-4">Cryptographie avancée</h1>
-  <p>Approfondissement avec des algorithmes modernes et propriétés de sécurité.</p>
-  <div class="mt-6">
-    <a href="https://github.com/a23houss/crypto_blogs/raw/main/initiation_cryptographie_4.pdf" class="text-blue-600 underline font-semibold" target="_blank">
-      📄 Voir le PDF du chapitre
-    </a>
+<body class="bg-gray-900 text-gray-100 font-sans">
+  <div class="flex min-h-screen">
+    <!-- Menu latéral -->
+    <aside class="w-64 bg-gray-800 p-6 hidden md:block">
+      <h2 class="text-xl font-semibold mb-4">📚 Navigation</h2>
+      <ul class="space-y-3 text-sm">
+        <li><a href="fondements-cryptographie.html" class="text-blue-400 hover:underline">1. Fondements</a></li>
+        <li><a href="chiffrement-AES.html" class="text-blue-400 hover:underline">2. AES</a></li>
+        <li><a href="diffie-hellman.html" class="text-blue-400 hover:underline">3. Diffie-Hellman</a></li>
+        <li><a href="cryptographie-avancee.html" class="text-blue-400 font-bold underline">4. RSA (vous êtes ici)</a></li>
+        <li><a href="cas-pratiques.html" class="text-blue-400 hover:underline">5. Hachage & Intégrité</a></li>
+        <li><a href="resume-complet.html" class="text-blue-400 hover:underline">6. Signature numérique</a></li>
+      </ul>
+    </aside>
+
+    <!-- Contenu principal -->
+    <main class="flex-1 p-6 max-w-4xl mx-auto">
+      <h1 class="text-3xl font-bold mb-6">Chiffrement asymétrique : RSA</h1>
+
+      <p class="mb-4">
+        Dans ce quatrième volet de ma série sur l’initiation à la cryptographie, nous allons nous intéresser à l’algorithme RSA, 
+        l’un des cryptosystèmes à clé publique les plus largement utilisés.
+      </p>
+
+      <p class="mb-4">
+        Cet algorithme a révolutionné la cryptographie moderne et ouvert de nouveaux axes de recherche dans le domaine. 
+        Il a d’ailleurs valu à ses trois concepteurs — Rivest, Shamir et Adleman — une reconnaissance internationale avec le prix Turing en 2002.
+      </p>
+
+      <p class="mb-4">
+        Nous commencerons par quelques rappels mathématiques essentiels pour comprendre RSA, notamment le théorème d’Euler 
+        et l’identité de Bézout. Ensuite, nous verrons le fonctionnement de l’algorithme : génération de clés, chiffrement et déchiffrement, 
+        avec une preuve de la validité du déchiffrement.
+      </p>
+
+      <p class="mb-6">
+        Enfin, nous aborderons les enjeux de sécurité liés à RSA, ainsi que sa vulnérabilité face à l’informatique quantique, 
+        notamment à travers l’algorithme de Shor.
+      </p>
+
+      <div class="mt-6 mb-10">
+        <a href="https://github.com/a23houss/crypto_blogs/raw/main/initiation_cryptographie_4.pdf"
+           class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition"
+           target="_blank">
+          📄 Télécharger le PDF du chapitre
+        </a>
+      </div>
+
+      <!-- Navigation articles -->
+      <div class="flex justify-between border-t border-gray-700 pt-6 mt-10 text-sm">
+        <a href="diffie-hellman.html" class="text-blue-400 hover:underline">← Chapitre précédent : Diffie-Hellman</a>
+        <a href="cas-pratiques.html" class="text-blue-400 hover:underline">Chapitre suivant : Fonctions de hachage →</a>
+      </div>
+    </main>
   </div>
-  <div class="mt-8">
-    <a href="index.html" class="text-sm text-gray-600 hover:underline">← Retour à l’accueil</a>
-  </div>
+
+  <!-- Pied de page -->
+  <footer class="bg-gray-800 text-center py-4 text-sm text-gray-400">
+    <p>© 2025 Awaleh Houssein, Ph.D – Tous droits réservés</p>
+  </footer>
 </body>
 </html>
+
