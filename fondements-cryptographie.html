@@ -5,16 +5,68 @@
   <title>Fondements de la cryptographie</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 text-gray-900 font-sans p-6">
-  <h1 class="text-3xl font-bold mb-4">Fondements de la cryptographie</h1>
-  <p>Bases de la cryptologie : définitions, principes et chiffrements classiques.</p>
-  <div class="mt-6">
-    <a href="https://github.com/a23houss/crypto_blogs/raw/main/initiation_cryptographie_1.pdf" class="text-blue-600 underline font-semibold" target="_blank">
-      📄 Voir le PDF du chapitre
-    </a>
+<body class="bg-gray-900 text-gray-100 font-sans">
+  <div class="flex min-h-screen">
+    <!-- Menu latéral -->
+    <aside class="w-64 bg-gray-800 p-6 hidden md:block">
+      <h2 class="text-xl font-semibold mb-4">📚 Navigation</h2>
+      <ul class="space-y-3 text-sm">
+        <li><a href="fondements-cryptographie.html" class="text-blue-400 hover:underline">1. Fondements</a></li>
+        <li><a href="chiffrement-AES.html" class="text-blue-400 hover:underline">2. AES</a></li>
+        <li><a href="diffie-hellman.html" class="text-blue-400 hover:underline">3. Diffie-Hellman</a></li>
+        <li><a href="cryptographie-avancee.html" class="text-blue-400 hover:underline">4. RSA</a></li>
+        <li><a href="cas-pratiques.html" class="text-blue-400 hover:underline">5. Hachage & Intégrité</a></li>
+        <li><a href="resume-complet.html" class="text-blue-400 hover:underline">6. Signature numérique</a></li>
+      </ul>
+    </aside>
+
+    <!-- Contenu principal -->
+    <main class="flex-1 p-6 max-w-4xl mx-auto">
+      <h1 class="text-3xl font-bold mb-6">Fondements de la cryptographie</h1>
+
+      <p class="mb-4">
+        Dans ce premier post de ma série dédiée à la cryptographie, je me suis intéressé aux fondements essentiels de la cryptologie.
+      </p>
+
+      <p class="mb-4">
+        Ce cours vous présente les principes de base de la cryptographie, en mettant l'accent sur :
+      </p>
+
+      <ul class="list-disc list-inside mb-4">
+        <li>Le chiffrement comme outil de confidentialité</li>
+        <li>Les principes de Kerckhoffs et de Shannon</li>
+        <li>La notion de sécurité inconditionnelle</li>
+      </ul>
+
+      <p class="mb-4">
+        Vous découvrirez également plusieurs systèmes de chiffrement classiques, tels que :
+      </p>
+
+      <ul class="list-disc list-inside mb-6">
+        <li>Le chiffrement de César</li>
+        <li>Le chiffrement de Vigenère</li>
+        <li>Le chiffrement de Vernam (ou OTP)</li>
+      </ul>
+
+      <div class="mt-6 mb-10">
+        <a href="https://github.com/a23houss/crypto_blogs/raw/main/initiation_cryptographie_1.pdf"
+           class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition"
+           target="_blank">
+          📄 Télécharger le PDF du chapitre
+        </a>
+      </div>
+
+      <!-- Navigation articles -->
+      <div class="flex justify-between border-t border-gray-700 pt-6 mt-10 text-sm">
+        <span class="text-gray-400">← Début de la série</span>
+        <a href="chiffrement-AES.html" class="text-blue-400 hover:underline">Chapitre suivant : AES →</a>
+      </div>
+    </main>
   </div>
-  <div class="mt-8">
-    <a href="index.html" class="text-sm text-gray-600 hover:underline">← Retour à l’accueil</a>
-  </div>
+
+  <!-- Pied de page -->
+  <footer class="bg-gray-800 text-center py-4 text-sm text-gray-400">
+    <p>© 2025 Awaleh Houssein, Ph.D – Tous droits réservés</p>
+  </footer>
 </body>
 </html>
