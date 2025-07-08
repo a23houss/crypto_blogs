@@ -2,22 +2,24 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Fonction de hachage cryptographique et intégrité</title>
+  <title>Fonctions de hachages cryptographique et intégrité des données</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100 text-gray-900 font-sans p-6">
-  <h1 class="text-3xl font-bold mb-4">Cas pratiques de chiffrement</h1>
+  <h1 class="text-3xl font-bold mb-4">Fonctions de hachages cryptographique et intégrité des données</h1>
   <p>Dans ce cinquième volet de ma série sur l’initiation à la cryptographie, nous allons explorer comment garantir l’intégrité des données.
 Petit rappel : lors des précédents épisodes, nous avons vu que le chiffrement – qu’il soit symétrique (ex. : AES) ou asymétrique (ex. : RSA) – permet d’assurer la confidentialité, c’est-à-dire empêcher la divulgation d’un message à toute personne ne possédant pas la clé secrète.
 Mais que se passe-t-il si un attaquant intercepte un message chiffré et le modifie ? Le chiffrement ne suffit pas à garantir que le message n’a pas été altéré. C’est là qu’intervient le concept d’intégrité : il permet de vérifier qu’un message n’a pas été modifié entre l’émetteur et le destinataire.
-
+<p>
+  <p>
 Pour répondre à ce besoin d’intégrité, ce post s’intéresse aux fonctions de hachage cryptographiques, qui transforment un message en une empreinte unique (appelée haché) et de taille fixe. Elles doivent être rapides, irréversibles, et résistantes aux collisions, c’est-à-dire qu’il doit être pratiquement impossible que deux messages différents produisent le même haché.
 Les anciens standards comme MD5 et SHA-1 sont aujourd’hui obsolètes car vulnérables aux attaques par collision.
-
+<p> 
+  <p>
 À l’inverse, SHA-2 (ex. : SHA-256) et SHA-3 (basé sur Keccak) sont les standards recommandés pour leur robustesse.
-
+<p> <p>
 Nous verrons comment ces fonctions assurent l’intégrité des données.
-
+<p> <p>
 Enfin, nous parlerons des mécanismes MAC et HMAC, qui garantissent l’intégrité des données en utilisant une clé sécrète. </p>
   <div class="mt-6">
     <a href="https://github.com/a23houss/crypto_blogs/raw/main/initiation_cryptographie_5.pdf" class="text-blue-600 underline font-semibold" target="_blank">
