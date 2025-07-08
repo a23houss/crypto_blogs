@@ -10,9 +10,9 @@
   <header class="bg-blue-900 text-white py-8">
     <div class="max-w-4xl mx-auto px-4">
       <h1 class="text-4xl font-bold">crypto_cours_blogs</h1>
-      <p class="text-lg mt-2">La cryptographie, ou "science du secret", vise à garantir la sécurité des informations  en garantissant leur confidentialité (empêcher leur divulgation à des tiers non autorisés), leur intégrité (assurer qu'elles n'ont pas été modifiées), leur authentification (vérifier l'identité des utilisateurs et des dispositifs) et la non-répudiation (empêcher de nier des actions, notamment dans le cadre de transactions). Elle repose sur divers outils et concepts mathématiques pour garantir la sécurité des informations et continue d’évoluer face aux menaces modernes.
-
-Bien que ce domaine puisse paraître complexe au premier abord (et, effectivement, il peut l’être), il est tout à fait accessible à un large public, à condition de l'aborder de manière pédagogique et de démystifier les concepts avancés. En d'autres termes, il s'agit de le rendre compréhensible (vulgariser) sans en altérer la profondeur (simplifier).</p>
+      <p class="text-lg mt-2">
+        La cryptographie, ou "science du secret", vise à garantir la sécurité des informations en assurant leur confidentialité, intégrité, authentification et non-répudiation. Bien que complexe en apparence, elle peut être rendue accessible à tous grâce à une approche pédagogique qui vulgarise sans trahir la rigueur des concepts.
+      </p>
     </div>
   </header>
 
@@ -20,37 +20,31 @@ Bien que ce domaine puisse paraître complexe au premier abord (et, effectivemen
     <section class="mb-16">
       <h2 class="text-2xl font-semibold text-blue-800 mb-4">Articles</h2>
       <ul class="space-y-4">
-
         <li class="border p-4 rounded hover:shadow">
           <a href="fondements-cryptographie.html" class="text-xl text-blue-700 font-semibold hover:underline">Fondements de la cryptographie</a>
-          <p class="text-sm mt-1">Bases de la cryptologie : définitions, principes et chiffrements classiques.</p>
+          <p class="text-sm mt-1">Bases de la cryptologie : définitions, principes et chiffrements classiques. Ce cours présente les principes de base de la cryptographie : chiffrement, Kerckhoffs, Shannon, et des exemples concrets comme les chiffrements de César, Vigenère et Vernam.</p>
         </li>
         <li class="border p-4 rounded hover:shadow">
           <a href="chiffrement-AES.html" class="text-xl text-blue-700 font-semibold hover:underline">Chiffrement symétrique : AES</a>
-          <p class="text-sm mt-1">Structure et fonctionnement du standard AES, utilisé dans le chiffrement des données.</p>
+          <p class="text-sm mt-1">Structure et fonctionnement du standard AES, les modes ECB, CBC et GCM. Explication des catégories : chiffrement à flot et par blocs. Applications concrètes dans la sécurité des données.</p>
         </li>
         <li class="border p-4 rounded hover:shadow">
           <a href="diffie-hellman.html" class="text-xl text-blue-700 font-semibold hover:underline">Échange de clés : Diffie-Hellman</a>
-          <p class="text-sm mt-1">Méthode de création de clé secrète partagée sans échange explicite.</p>
+          <p class="text-sm mt-1">Introduction à la méthode d'échange de clés sans transmission directe. Présentation de l'algorithme historique de 1976 et ses applications sur réseaux publics.</p>
         </li>
         <li class="border p-4 rounded hover:shadow">
-          <a href="cryptographie-avancee.html" class="text-xl text-blue-700 font-semibold hover:underline">Cryptographie avancée</a>
-          <p class="text-sm mt-1">Approfondissement avec des algorithmes modernes et propriétés de sécurité.</p>
+          <a href="cryptographie-avancee.html" class="text-xl text-blue-700 font-semibold hover:underline">Chiffrement asymétrique : RSA</a>
+          <p class="text-sm mt-1">Fonctionnement de RSA, un algorithme à clé publique : rappels mathématiques, génération de clés, chiffrement, déchiffrement, et sécurité quantique.</p>
         </li>
         <li class="border p-4 rounded hover:shadow">
-          <a href="cas-pratiques.html" class="text-xl text-blue-700 font-semibold hover:underline">Cas pratiques de chiffrement</a>
-          <p class="text-sm mt-1">Mises en application concrètes des concepts cryptographiques étudiés.</p>
+          <a href="cas-pratiques.html" class="text-xl text-blue-700 font-semibold hover:underline">Fonctions de hachage et intégrité</a>
+          <p class="text-sm mt-1">Utilité des fonctions de hachage cryptographiques (SHA-256, SHA-3), mécanismes d'intégrité (MAC, HMAC), et détection de modifications de données.</p>
         </li>
         <li class="border p-4 rounded hover:shadow">
-          <a href="resume-complet.html" class="text-xl text-blue-700 font-semibold hover:underline">Résumé complet</a>
-          <p class="text-sm mt-1">Synthèse globale du parcours cryptographique et points clés.</p>
+          <a href="resume-complet.html" class="text-xl text-blue-700 font-semibold hover:underline">Signature numérique et authentification</a>
+          <p class="text-sm mt-1">Comment prouver l'identité de l'expéditeur d'un message avec une signature numérique. Applications dans les emails, blockchain, certificats, etc.</p>
         </li>
       </ul>
-    </section>
-    <section class="bg-blue-100 p-6 rounded">
-      <h3 class="text-xl font-bold text-blue-800">Tu veux aller plus loin ?</h3>
-      <p class="mt-2">Inscris-toi à mon cours complet sur Udemy pour maîtriser la cryptographie avec des exemples concrets.</p>
-      <a href="#" class="mt-4 inline-block bg-blue-700 text-white py-2 px-4 rounded hover:bg-blue-800 transition">Voir le cours Udemy</a>
     </section>
   </main>
 
