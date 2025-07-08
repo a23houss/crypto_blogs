@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Signature numérique et authentification</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+  <div class="flex min-h-screen">
+    <!-- Menu latéral -->
+    <aside class="w-64 bg-gray-800 p-6 hidden md:block">
+      <h2 class="text-xl font-semibold mb-4">📚 Navigation</h2>
+      <ul class="space-y-3 text-sm">
+        <li><a href="fondements-cryptographie.html" class="text-blue-400 hover:underline">1. Fondements</a></li>
+        <li><a href="chiffrement-AES.html" class="text-blue-400 hover:underline">2. AES</a></li>
+        <li><a href="diffie-hellman.html" class="text-blue-400 hover:underline">3. Diffie-Hellman</a></li>
+        <li><a href="cryptographie-avancee.html" class="text-blue-400 hover:underline">4. RSA</a></li>
+        <li><a href="cas-pratiques.html" class="text-blue-400 hover:underline">5. Hachage & Intégrité</a></li>
+        <li><a href="signature.html" class="text-blue-400 font-bold underline">6. Signature numérique (vous êtes ici)</a></li>
+      </ul>
+    </aside>
+
+    <!-- Contenu principal -->
+    <main class="flex-1 p-6 max-w-4xl mx-auto">
+      <h1 class="text-3xl font-bold mb-6">Signature numérique et authentification</h1>
+
+      <p class="mb-4">
+        Dans ce sixième volet de ma série sur l’initiation à la cryptographie, on va s’attaquer à une question simple, mais essentielle : comment prouver qu’un message vient bien de son expéditeur, sans qu’il puisse le nier plus tard ?
+      </p>
+
+      <p class="mb-4">
+        Jusqu’ici, on a vu comment protéger un message contre la lecture (confidentialité) et contre la modification (intégrité). Mais cela ne suffit pas à prouver qui a réellement envoyé ce message. Si l’on veut aussi garantir l’identité de l’expéditeur — et l’empêcher de nier l’envoi — il faut un outil de plus : la signature numérique.
+      </p>
+
+      <p class="mb-6">
+        Dans ce post, je vous présente comment fonctionne ce mécanisme, à quoi il sert, et pourquoi il est devenu indispensable dans des domaines comme les emails sécurisés, la signature de contrats, la blockchain ou les certificats web.
+      </p>
+
+      <div class="mt-6 mb-10">
+        <a href="https://github.com/a23houss/crypto_blogs/raw/main/initiation_cryptographie_6.pdf"
+           class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition"
+           target="_blank">
+          📄 Télécharger le PDF du chapitre
+        </a>
+      </div>
+
+      <!-- Navigation articles -->
+      <div class="flex justify-between border-t border-gray-700 pt-6 mt-10 text-sm">
+        <a href="cas-pratiques.html" class="text-blue-400 hover:underline">← Chapitre précédent : Hachage & Intégrité</a>
+        <a href="resume-complet.html" class="text-blue-400 hover:underline">Résumé complet →</a>
+      </div>
+    </main>
+  </div>
+
+  <!-- Pied de page -->
+  <footer class="bg-gray-800 text-center py-4 text-sm text-gray-400">
+    <p>© 2025 Awaleh Houssein, Ph.D – Tous droits réservés</p>
+  </footer>
+</body>
+</html>
