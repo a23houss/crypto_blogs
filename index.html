@@ -2,54 +2,77 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Initiation à la cryptographie</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans">
-  <header class="bg-blue-900 text-white py-8">
-    <div class="max-w-4xl mx-auto px-4">
-      <h1 class="text-4xl font-bold">Initiation à la crypographie</h1>
-      <p class="text-lg mt-2">
-        La cryptographie, ou "science du secret", vise à garantir la sécurité des informations en assurant leur confidentialité, intégrité, authentification et non-répudiation. Bien que complexe en apparence, elle peut être rendue accessible à tous grâce à une approche pédagogique qui vulgarise sans trahir la rigueur des concepts.
+<body class="bg-gray-900 text-gray-100 font-sans min-h-screen flex flex-col">
+
+  <header class="bg-blue-900 text-white py-8 px-6 md:pl-72">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl font-bold mb-6">Initiation à la cryptographie</h1>
+      <p class="text-lg leading-relaxed whitespace-pre-line max-w-3xl">
+        La cryptographie, ou "science du secret", vise à garantir la sécurité des informations en garantissant leur confidentialité (empêcher leur divulgation à des tiers non autorisés), leur intégrité (assurer qu'elles n'ont pas été modifiées), leur authentification (vérifier l'identité des utilisateurs et des dispositifs) et la non-répudiation (empêcher de nier des actions, notamment dans le cadre de transactions). Elle repose sur divers outils et concepts mathématiques pour garantir la sécurité des informations et continue d’évoluer face aux menaces modernes.
+
+        <br /><br />
+
+        Bien que ce domaine puisse paraître complexe au premier abord (et, effectivement, il peut l’être), il est tout à fait accessible à un large public, à condition de l'aborder de manière pédagogique et de démystifier les concepts avancés. En d'autres termes, il s'agit de le rendre compréhensible (vulgariser) sans en altérer la profondeur (simplifier).
       </p>
     </div>
   </header>
 
-  <main class="max-w-4xl mx-auto px-4 py-10">
-    <section class="mb-16">
-      <h2 class="text-2xl font-semibold text-blue-800 mb-4">Articles</h2>
-      <ul class="space-y-4">
-        <li class="border p-4 rounded hover:shadow">
-          <a href="fondements-cryptographie.html" class="text-xl text-blue-700 font-semibold hover:underline">Fondements de la cryptographie</a>
-          <p class="text-sm mt-1">Bases de la cryptologie : définitions, principes et chiffrements classiques. Ce cours présente les principes de base de la cryptographie : chiffrement, Kerckhoffs, Shannon, et des exemples concrets comme les chiffrements de César, Vigenère et Vernam.</p>
-        </li>
-        <li class="border p-4 rounded hover:shadow">
-          <a href="chiffrement-AES.html" class="text-xl text-blue-700 font-semibold hover:underline">Chiffrement symétrique : AES</a>
-          <p class="text-sm mt-1">Structure et fonctionnement du standard AES, les modes ECB, CBC et GCM. Explication des catégories : chiffrement à flot et par blocs. Applications concrètes dans la sécurité des données.</p>
-        </li>
-        <li class="border p-4 rounded hover:shadow">
-          <a href="diffie-hellman.html" class="text-xl text-blue-700 font-semibold hover:underline">Échange de clés : Diffie-Hellman</a>
-          <p class="text-sm mt-1">Introduction à la méthode d'échange de clés sans transmission directe. Présentation de l'algorithme historique de 1976 et ses applications sur réseaux publics.</p>
-        </li>
-        <li class="border p-4 rounded hover:shadow">
-          <a href="cryptographie-avancee.html" class="text-xl text-blue-700 font-semibold hover:underline">Chiffrement asymétrique : RSA</a>
-          <p class="text-sm mt-1">Fonctionnement de RSA, un algorithme à clé publique : rappels mathématiques, génération de clés, chiffrement, déchiffrement, et sécurité quantique.</p>
-        </li>
-        <li class="border p-4 rounded hover:shadow">
-          <a href="cas-pratiques.html" class="text-xl text-blue-700 font-semibold hover:underline">Fonctions de hachage et intégrité</a>
-          <p class="text-sm mt-1">Utilité des fonctions de hachage cryptographiques (SHA-256, SHA-3), mécanismes d'intégrité (MAC, HMAC), et détection de modifications de données.</p>
-        </li>
-        <li class="border p-4 rounded hover:shadow">
-          <a href="signature.html" class="text-xl text-blue-700 font-semibold hover:underline">Signature numérique et authentification</a>
-          <p class="text-sm mt-1">Comment prouver l'identité de l'expéditeur d'un message avec une signature numérique. Applications dans les emails, blockchain, certificats, etc.</p>
-        </li>
+  <div class="flex flex-1">
+    <!-- Menu latéral -->
+    <aside class="fixed top-0 left-0 h-full w-64 bg-gray-800 p-6 hidden md:block overflow-y-auto">
+      <h2 class="text-xl font-semibold mb-6">📚 Navigation</h2>
+      <ul class="space-y-4 text-sm">
+        <li><a href="index.html" class="block text-blue-400 hover:underline font-semibold">🏠 Accueil</a></li>
+        <li><a href="fondements-cryptographie.html" class="block text-blue-400 hover:underline">1. Fondements</a></li>
+        <li><a href="chiffrement-AES.html" class="block text-blue-400 hover:underline">2. AES</a></li>
+        <li><a href="diffie-hellman.html" class="block text-blue-400 hover:underline">3. Diffie-Hellman</a></li>
+        <li><a href="cryptographie-avancee.html" class="block text-blue-400 hover:underline">4. RSA</a></li>
+        <li><a href="cas-pratiques.html" class="block text-blue-400 hover:underline">5. Hachage & Intégrité</a></li>
+        <li><a href="signature.html" class="block text-blue-400 hover:underline">6. Signature numérique</a></li>
       </ul>
-    </section>
-  </main>
+    </aside>
 
-  <footer class="bg-gray-200 text-center py-4 text-sm">
+    <!-- Contenu principal -->
+    <main class="flex-1 max-w-4xl mx-auto p-6 md:ml-72">
+      <section class="mb-16">
+        <h2 class="text-2xl font-semibold text-blue-400 mb-6">Articles</h2>
+        <ul class="space-y-6">
+          <li class="border border-gray-700 p-4 rounded hover:shadow-lg hover:border-blue-600 transition">
+            <a href="fondements-cryptographie.html" class="text-xl text-blue-400 font-semibold hover:underline">Fondements de la cryptographie</a>
+            <p class="text-sm mt-2 text-gray-300">Bases de la cryptologie : définitions, principes et chiffrements classiques. Ce cours présente les principes de base de la cryptographie : chiffrement, Kerckhoffs, Shannon, et des exemples concrets comme les chiffrements de César, Vigenère et Vernam.</p>
+          </li>
+          <li class="border border-gray-700 p-4 rounded hover:shadow-lg hover:border-blue-600 transition">
+            <a href="chiffrement-AES.html" class="text-xl text-blue-400 font-semibold hover:underline">Chiffrement symétrique : AES</a>
+            <p class="text-sm mt-2 text-gray-300">Structure et fonctionnement du standard AES, les modes ECB, CBC et GCM. Explication des catégories : chiffrement à flot et par blocs. Applications concrètes dans la sécurité des données.</p>
+          </li>
+          <li class="border border-gray-700 p-4 rounded hover:shadow-lg hover:border-blue-600 transition">
+            <a href="diffie-hellman.html" class="text-xl text-blue-400 font-semibold hover:underline">Échange de clés : Diffie-Hellman</a>
+            <p class="text-sm mt-2 text-gray-300">Introduction à la méthode d'échange de clés sans transmission directe. Présentation de l'algorithme historique de 1976 et ses applications sur réseaux publics.</p>
+          </li>
+          <li class="border border-gray-700 p-4 rounded hover:shadow-lg hover:border-blue-600 transition">
+            <a href="cryptographie-avancee.html" class="text-xl text-blue-400 font-semibold hover:underline">Chiffrement asymétrique : RSA</a>
+            <p class="text-sm mt-2 text-gray-300">Fonctionnement de RSA, un algorithme à clé publique : rappels mathématiques, génération de clés, chiffrement, déchiffrement, et sécurité quantique.</p>
+          </li>
+          <li class="border border-gray-700 p-4 rounded hover:shadow-lg hover:border-blue-600 transition">
+            <a href="cas-pratiques.html" class="text-xl text-blue-400 font-semibold hover:underline">Fonctions de hachage et intégrité</a>
+            <p class="text-sm mt-2 text-gray-300">Utilité des fonctions de hachage cryptographiques (SHA-256, SHA-3), mécanismes d'intégrité (MAC, HMAC), et détection de modifications de données.</p>
+          </li>
+          <li class="border border-gray-700 p-4 rounded hover:shadow-lg hover:border-blue-600 transition">
+            <a href="signature.html" class="text-xl text-blue-400 font-semibold hover:underline">Signature numérique et authentification</a>
+            <p class="text-sm mt-2 text-gray-300">Comment prouver l'identité de l'expéditeur d'un message avec une signature numérique. Applications dans les emails, blockchain, certificats, etc.</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <footer class="bg-gray-800 text-center py-4 text-sm text-gray-400 mt-auto">
     <p>Awaleh Houssein, Ph.D &copy; 2025 - Tous droits réservés</p>
   </footer>
+
 </body>
 </html>
