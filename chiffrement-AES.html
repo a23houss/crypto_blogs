@@ -5,46 +5,69 @@
   <title>Chiffrement symétrique : AES</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans p-6">
-  <div class="max-w-3xl mx-auto">
-    <h1 class="text-3xl font-bold mb-6">Chiffrement symétrique : AES</h1>
+<body class="bg-gray-900 text-gray-100 font-sans">
+  <div class="flex min-h-screen">
+    <!-- Menu latéral -->
+    <aside class="w-64 bg-gray-800 p-6 hidden md:block">
+      <h2 class="text-xl font-semibold mb-4">📚 Navigation</h2>
+      <ul class="space-y-3 text-sm">
+        <li><a href="fondements-cryptographie.html" class="text-blue-400 hover:underline">1. Fondements</a></li>
+        <li><a href="chiffrement-AES.html" class="text-blue-400 font-bold underline">2. AES (vous êtes ici)</a></li>
+        <li><a href="diffie-hellman.html" class="text-blue-400 hover:underline">3. Diffie-Hellman</a></li>
+        <li><a href="cryptographie-avancee.html" class="text-blue-400 hover:underline">4. RSA</a></li>
+        <li><a href="cas-pratiques.html" class="text-blue-400 hover:underline">5. Hachage & Intégrité</a></li>
+        <li><a href="resume-complet.html" class="text-blue-400 hover:underline">6. Signature numérique</a></li>
+      </ul>
+    </aside>
 
-    <p class="mb-4">
-      Dans ce deuxième volet de ma série sur la cryptographie, je vous propose d'explorer le chiffrement symétrique.
-      Ce cours vous présentera son fonctionnement ainsi que ses deux principales catégories : 
-      le chiffrement à flot et le chiffrement par blocs, sur lequel nous concentrerons notre attention.
-    </p>
+    <!-- Contenu principal -->
+    <main class="flex-1 p-6 max-w-4xl mx-auto">
+      <h1 class="text-3xl font-bold mb-6">Chiffrement symétrique : AES</h1>
 
-    <p class="mb-4">
-      Nous étudierons en détail le standard AES (Advanced Encryption Standard), 
-      référence mondiale du chiffrement symétrique par blocs. Vous découvrirez son historique, 
-      sa structure de base, les mécanismes de chiffrement/déchiffrement, ainsi que le processus 
-      de génération des sous-clés.
-    </p>
+      <p class="mb-4">
+        Dans ce deuxième volet de ma série sur la cryptographie, je vous propose d'explorer le chiffrement symétrique.
+        Ce cours vous présentera son fonctionnement ainsi que ses deux principales catégories : 
+        le chiffrement à flot et le chiffrement par blocs, sur lequel nous concentrerons notre attention.
+      </p>
 
-    <p class="mb-4">
-      Il est important de noter que le chiffrement AES est utilisé avec un mode opératoire. 
-      Les modes de chiffrement les plus utilisés sont : <strong>ECB, CBC, GCM</strong>. 
-      Pour plus de détails, je vous invite à consulter ce lien :<br>
-      <a href="https://lnkd.in/edWtAns7" target="_blank" class="text-blue-400 underline">https://lnkd.in/edWtAns7</a>
-    </p>
+      <p class="mb-4">
+        Nous étudierons en détail le standard AES (Advanced Encryption Standard), 
+        référence mondiale du chiffrement symétrique par blocs. Vous découvrirez son historique, 
+        sa structure de base, les mécanismes de chiffrement/déchiffrement, ainsi que le processus 
+        de génération des sous-clés.
+      </p>
 
-    <p class="mb-6">
-      Enfin, nous mettrons en lumière ses applications concrètes dans divers domaines 
-      pour illustrer son importance dans la sécurité moderne.
-    </p>
+      <p class="mb-4">
+        Il est important de noter que le chiffrement AES est utilisé avec un mode opératoire. 
+        Les modes de chiffrement les plus utilisés sont : <strong>ECB, CBC, GCM</strong>. 
+        Pour plus de détails, je vous invite à consulter ce lien :<br>
+        <a href="https://lnkd.in/edWtAns7" target="_blank" class="text-blue-400 underline">https://lnkd.in/edWtAns7</a>
+      </p>
 
-    <div class="mt-6">
-      <a href="https://github.com/a23houss/crypto_blogs/raw/main/initiation_cryptographie_2.pdf"
-         class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition"
-         target="_blank">
-        📄 Télécharger le PDF du chapitre
-      </a>
-    </div>
+      <p class="mb-6">
+        Enfin, nous mettrons en lumière ses applications concrètes dans divers domaines 
+        pour illustrer son importance dans la sécurité moderne.
+      </p>
 
-    <div class="mt-10">
-      <a href="index.html" class="text-sm text-blue-300 hover:underline">← Retour à l’accueil</a>
-    </div>
+      <div class="mt-6 mb-10">
+        <a href="https://github.com/a23houss/crypto_blogs/raw/main/initiation_cryptographie_2.pdf"
+           class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition"
+           target="_blank">
+          📄 Télécharger le PDF du chapitre
+        </a>
+      </div>
+
+      <!-- Navigation articles -->
+      <div class="flex justify-between border-t border-gray-700 pt-6 mt-10 text-sm">
+        <a href="fondements-cryptographie.html" class="text-blue-400 hover:underline">← Chapitre précédent : Fondements</a>
+        <a href="diffie-hellman.html" class="text-blue-400 hover:underline">Chapitre suivant : Diffie-Hellman →</a>
+      </div>
+    </main>
   </div>
+
+  <!-- Pied de page -->
+  <footer class="bg-gray-800 text-center py-4 text-sm text-gray-400">
+    <p>© 2025 Awaleh Houssein – Tous droits réservés</p>
+  </footer>
 </body>
 </html>
